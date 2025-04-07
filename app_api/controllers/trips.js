@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Trip = require('../models/travlr'); //Register model
 const Model = mongoose.model('trips');
+//const User = mongoose.model('users');
 
 //GET: /trips - lists all the trips
 // Regardless of outcome, response must include HTML status code
@@ -75,6 +76,17 @@ const tripsAddTrip = async (req, res) => {
         }
 };
 
+// DELETE: /trips/:tripCode - Deletes a trip
+const tripsDeleteTrip = async (req, res) => {
+    const q = await Model.findOneAndDelete({ 'code': req.params.tripCode }).exec();
+
+    if (!q) {
+        return res.status(404).json({ message: 'Trip not found' });
+    } else {
+        return res.status(200).json({ message: 'Trip successfully deleted' });
+    }
+};
+
 // PUT: /trips/:tripCode - Adds a new Trip
 // Regardless of outcome, response must include HTML status code
 // and JSON message to the requesting client
@@ -120,5 +132,6 @@ module.exports = {
     tripsList,
     tripsFindByCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip // Exporting the new delete method
 };
