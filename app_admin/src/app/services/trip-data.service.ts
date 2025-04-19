@@ -17,12 +17,13 @@ export class TripDataService {
     private http: HttpClient,
     @Inject(BROWSER_STORAGE) private storage: Storage
   ) {}
-  baseUrl = 'http://localhost:3000/api/trips';
+  //baseUrl = 'http://localhost:3000/api/trips';
 
-  /*constructor(private http: HttpClient) {}
-  baseUrl = 'http://localhost:3000/api/trips';*/ 
+  /*constructor(private http: HttpClient) {}*/
+  baseUrl = 'http://localhost:3000/api/trips';
   //this code deletes all the trip cards and leaves only the 'add trip'
 
+  // Each method is used to either get, add, or update the trip based on the trip code and URL provided
   getTrips() : Observable<Trip[]> {
     return this.http.get<Trip[]>(this.baseUrl);
   }

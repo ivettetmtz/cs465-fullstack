@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TripListingComponent } from './trip-listing/trip-listing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+// Connects the components together for the application
 @Component({
   selector: 'app-root',
   imports: [CommonModule, RouterOutlet, TripListingComponent, NavbarComponent],

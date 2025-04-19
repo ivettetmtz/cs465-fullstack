@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeleteTripComponent } from './delete-trip.component';
 
+// Creates the delete component needed to delete a trip card
 describe('DeleteTripComponent', () => {
   let component: DeleteTripComponent;
   let fixture: ComponentFixture<DeleteTripComponent>;

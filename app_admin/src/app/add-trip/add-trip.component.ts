@@ -11,6 +11,7 @@ import { TripDataService } from '../services/trip-data.service';
   templateUrl: './add-trip.component.html',
   styleUrl: './add-trip.component.css'
 })
+// implements the adding trip 
 export class AddTripComponent implements OnInit {
   public addForm!: FormGroup;
   submitted = false;
@@ -21,6 +22,7 @@ export class AddTripComponent implements OnInit {
     private tripService: TripDataService
   ) { }
 
+  // Makes sure that all variables are inputted by the user
   ngOnInit() {
     this.addForm = this.formBuilder.group ({
       _id: [],
@@ -35,6 +37,7 @@ export class AddTripComponent implements OnInit {
     })
   }
 
+  // Either adds the trip or sends error message if not able to add
   public onSubmit() {
     this.submitted = true;
     if(this.addForm.valid) {

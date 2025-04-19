@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TripCardComponent } from './trip-card.component';
 
+// Creates a trip card component for each trip created
 describe('TripCardComponent', () => {
   let component: TripCardComponent;
   let fixture: ComponentFixture<TripCardComponent>;

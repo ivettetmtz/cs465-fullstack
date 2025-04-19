@@ -11,6 +11,7 @@ export class JwtInterceptor implements HttpInterceptor {
     private authenticationService: AuthenticationService   
   ) {} 
 
+  // Handles the authentication and registering of the user with token 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {     
     var isAuthAPI: boolean;
   
@@ -20,6 +21,7 @@ export class JwtInterceptor implements HttpInterceptor {
     } else {       
       isAuthAPI = false;     
     }      
+    // Token can be used when the user is logged in to edit trip
     if(this.authenticationService.isLoggedIn() && !isAuthAPI) {       
       let token = this.authenticationService.getToken();       
       // console.log(token);       

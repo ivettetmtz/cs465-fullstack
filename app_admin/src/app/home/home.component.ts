@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+// Home component notifies user when you are logged in
   public isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }

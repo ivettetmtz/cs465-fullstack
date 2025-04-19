@@ -22,7 +22,8 @@ export class TripCardComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+  // Trip can be edited or deleted based on the trip code found
+  // Also checks authentication for user logged in
   public isLoggedIn() {
     return this.authenticationService.isLoggedIn();
   }

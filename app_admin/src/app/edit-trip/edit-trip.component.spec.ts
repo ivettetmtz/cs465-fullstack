@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditTripComponent } from './edit-trip.component';
 
+// creates the edit trip component to edit any trip card
 describe('EditTripComponent', () => {
   let component: EditTripComponent;
   let fixture: ComponentFixture<EditTripComponent>;

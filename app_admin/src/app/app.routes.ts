@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { DeleteTripComponent } from './delete-trip/delete-trip.component';
 
+// All routes are identified for the necessary changes to the trip cards
 export const routes: Routes = [
     { path: 'add-trip', component: AddTripComponent },
     { path: 'edit-trip', component: EditTripComponent },

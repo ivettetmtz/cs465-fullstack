@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit{
   public formError: string = '';
   submitted = false;
 
+  // login credentials are neeeded to login 
   credentials = {
     name: '',
     email: '',
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit{
     private authenticationService: AuthenticationService
   ) {}
 
+  // Checks for password and email on the login credentials
   ngOnInit(): void { 
   }
   public onLoginSubmit(): void {
@@ -47,8 +49,10 @@ export class LoginComponent implements OnInit{
     // console.log('LoginComponent::doLogin');
     // console.log(this.credentials);
 
+    // places new credentials as the new user 
     this.authenticationService.login(newUser, this.credentials.password);
 
+    //If user is logged in there will be a timeout time 
     if(this.authenticationService.isLoggedIn()) {
       // console.log('Router::Direct');
       this.router.navigate(['']);

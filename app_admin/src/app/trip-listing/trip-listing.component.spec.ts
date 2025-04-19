@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TripListingComponent } from './trip-listing.component';
 
+// Creates a trip listing component for API route
 describe('TripListingComponent', () => {
   let component: TripListingComponent;
   let fixture: ComponentFixture<TripListingComponent>;

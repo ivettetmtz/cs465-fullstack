@@ -4,6 +4,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
 import { RouterModule } from '@angular/router';
 
+// Notifies the user if you are logged in or logged out in the navigation bar
 @Component({
   selector: 'app-navbar',
   standalone: true,

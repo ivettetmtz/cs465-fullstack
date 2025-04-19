@@ -21,6 +21,7 @@ export class TripListingComponent implements OnInit {
   trips!: Trip[];
   message: string = '';
 
+  // Trips can be edited through the trip listing and showcases the list of trips available
   constructor(
     private tripDataService: TripDataService,
     private router: Router,

@@ -36,6 +36,7 @@ export class EditTripComponent implements OnInit {
     console.log('EditTripComponent::ngOnInit');
     console.log('tripcode:' + tripCode);
 
+    // Makes sure that the trip card contains all the following to be edited
     this.editForm = this.formBuilder.group ({
       _id: [],
       code: [tripCode, Validators.required],

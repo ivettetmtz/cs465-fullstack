@@ -16,6 +16,7 @@ export class DeleteTripComponent implements OnInit {
     private tripService: TripDataService
   ) { }
 
+  // Sees if it can find the trip code and if not then sends error message
   ngOnInit() {
     let tripCode = localStorage.getItem("tripCode");
     if (!tripCode) {
@@ -27,6 +28,7 @@ export class DeleteTripComponent implements OnInit {
     // Added method to find trip code to delete the trip
     console.log("DeleteTripComponent found tripCode " + tripCode);
 
+    // deletes trip card and sends message of deletion
     this.tripService.deleteTrip(tripCode)
       .subscribe( (data) => {
         console.log('Trip deleted successfully:', data);

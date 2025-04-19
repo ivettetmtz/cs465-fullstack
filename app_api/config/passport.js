@@ -3,6 +3,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const User = mongoose.model('users');
 
+// Returns the incorrect username or password used for a logged in user
 passport.use(
     new LocalStrategy(
         {
